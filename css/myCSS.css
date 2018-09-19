@@ -1,0 +1,54 @@
+body{
+	background-color: rgba(64, 64, 64, 1);
+}
+
+.cover-contain{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../assets/RDM.png);
+	height: 100vh;
+}
+
+.spacer{
+	height:56px;
+	width:100%;
+}
+
+.coverNav{
+	position: relative;
+}
+.fullPageContain{
+	height: 100vh;
+	width: 100%;
+}
+.centralBanner{
+	background-color: transparent;
+}
+
+.navbar-padding{
+	margin-top: 56px;
+}
+
+.myGray{
+	background-color: rgba(64, 64, 64, 1);
+}
+
+.myGray2{
+	background-color: rgba(30, 30, 30, 1);
+}
+
+.myRed{
+	background-color: rgba(102, 0, 0, 1);
+}
+
+.myBlue{
+	background-color: rgba(52, 73, 94, 1);
+}
+
+.mapPic{
+	height: 1000px;
+	width: auto;
+	margin: auto;
+	display: block;
+}
