@@ -51,4 +51,7 @@ body{
 	width: auto;
 	margin: auto;
 	display: block;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
 }

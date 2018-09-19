@@ -7,6 +7,7 @@
 // });
 
 
+var clicked = false;
 
 $(document).ready(function() {
 
@@ -33,9 +34,14 @@ $(document).ready(function() {
 		var x = event.pageX - xy.left;
         var y = event.pageY - xy.top;
         console.log("REAL x,y", x,y)
+        console.log("ADJ COORD: (",(x*.041)+1,",",(y*.041)+1,")")
+
+        if (clicked){
+        	$("#marker").remove()
+        }
 
 		 $("body").append(            
-			            $('<div></div>').css({
+			            $('<div id="marker"></div>').css({
 			                position: 'absolute',
 			                top: event.pageY-5 + 'px',
 			                left: event.pageX-5 + 'px',
@@ -43,7 +49,9 @@ $(document).ready(function() {
 			                height: '10px',
 			                background: '#000000'
 			            })              
-			        );               
+			        );
+
+		clicked = true;
 
 	// });		 
 
