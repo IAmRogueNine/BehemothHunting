@@ -37,9 +37,9 @@ var locationToRegion={
 	//Coerthas
 	"Coerthas_Western_Highlands":"Coerthas",
 	"Coerthas_Central_Highlands":"Coerthas",
-	//Abalthias_Spine
-	"The_Sea_of_Clouds":"Abalthias_Spine",
-	"Azys_Lla":"Abalthias_Spine",
+	//Abalathias_Spine
+	"The_Sea_of_Clouds":"Abalathias_Spine",
+	"Azys_Lla":"Abalathias_Spine",
 	//Dravania
 	"The_Dravanian_Forelands":"Dravania",
 	"The_Dravanian_Hinterlands":"Dravania",
@@ -62,21 +62,21 @@ var locationToRegion={
 function loadThePage(){
 	var clicked = false;
 
+	//reset
+	$('.sr-only').remove();
+	$('.nav-link').removeClass("active");
+
 	$("#marker").remove();
 
 	var url = window.location.toString();
-	
+
 	var locationStr = url.split("#").pop();
 	var locationStrPretty = locationStr.replace(/_/g, " ");
 	var region  = locationToRegion[locationStr]
 
-	if (locationStr != "Mor_Dhona"){
-		var locationDropDown = "#"+region+"_Dropdown";
-		//change navbar active 
-   		$(locationDropDown).append('<span class="sr-only">(current)</span>');
-   		$(locationDropDown).addClass("active");
-	}
-
+	var locationDropDown = "#"+region+"_Dropdown";
+	$(locationDropDown).addClass("active");
+	$(locationDropDown).append('<span class="sr-only">(current)</span>');
 
 	
 	//change title
