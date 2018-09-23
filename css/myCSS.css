@@ -1,17 +1,59 @@
 body{
 	background-color: rgba(64, 64, 64, 1);
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
-.cover-contain{
+
+
+@-webkit-keyframes pulse {
+	0% { box-shadow:0 0 8px #ad0101, inset 0 0 8px #ad0101; }
+	50% { box-shadow:0 0 16px #ad0101, inset 0 0 14px #ad0101; }
+	100% { box-shadow:0 0 8px #ad0101, inset 0 0 8px #ad0101; }
+}
+
+#navBarImg{
+	height: 40px; /*same height as navbar */
+	width: auto;
+}
+
+
+/*.display-4{
+	font-family: 'Source Sans Pro', sans-serif;
+}*/
+
+#marker{
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background: #ad0101;
+	border-radius:50px;
+	box-shadow: 0 0 8px #ad0101, inset 0 0 8px #ad0101;
+	-webkit-animation: pulse 1s linear 1s infinite;
+
+}
+
+#myCover{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-image: url(../assets/RDM.png);
+	/*background-image: url(../assets/RDM.png);*/
 	height: 100vh;
 }
 
+
+.navbar-nav{
+	font-size: 1rem;
+}
+
+.myNavDropdown{
+	font-size:  .75rem;
+}
+.myNavDropdownItem{
+	color: white;
+}
+
 .spacer{
-	height:56px;
+	height:56px; /*same height as navbar */
 	width:100%;
 }
 
@@ -24,10 +66,6 @@ body{
 }
 .centralBanner{
 	background-color: transparent;
-}
-
-.navbar-padding{
-	margin-top: 56px;
 }
 
 .myGray{
@@ -47,7 +85,9 @@ body{
 }
 
 .mapPic{
-	height: 1000px;
+	/*height: 100vmin;*/
+	/*width: 100vmin;*/
+	height: auto;
 	width: auto;
 	margin: auto;
 	display: block;

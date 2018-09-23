@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet">
+	<title>CharmmyKittyHelper</title>
+	<link rel="icon" type="image/png" href="assets/bh_favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/myCSS.css"/>
+	<!-- <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script> -->
+	<!-- <script src="js/myScript.js"></script> -->
+</head>
+
+<!-- https://iamroguenine.github.io/BehemothHunting_CharmmyKittyMappingHelper/index.html -->
+
+<body>
+	<div class="cover-contain" id="myCover">
+		<nav class="coverNav navbar navbar-dark myRed fixed-top navbar-expand-lg" id="theNavBar">
+			<a class="navbar-left" href="CK_MapHelper.html"><img id="navBarImg" src="assets/bh_bar.png"></a>
+			<button class="navbar-toggler" id="hamburgerBtn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="Thanalan_Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Thanalan
+						</a>
+						<div class="dropdown-menu myNavDropdown myGray2 text-white" aria-labelledby="Thanalan_Dropdown">
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Northern_Thanalan">Northern Thanalan</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Western_Thanalan">Western Thanalan</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Central_Thanalan">Central Thanalan</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Eastern_Thanalan">Eastern Thanalan</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Southern_Thanalan">Southern Thanalan</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="La_Noscea_Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							La Noscea
+						</a>
+						<div class="dropdown-menu myNavDropdown myGray2 text-white" aria-labelledby="La_Noscea_Dropdown">
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Outer_La_Noscea">Outer La Noscea</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Upper_La_Noscea">Upper La Noscea</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Western_La_Noscea">Western La Noscea</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Middle_La_Noscea">Middle La Noscea</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Eastern_La_Noscea">Eastern La Noscea</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Lower_La_Noscea">Lower La Noscea</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="The_Black_Shroud_Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							The Black Shroud
+						</a>
+						<div class="dropdown-menu myNavDropdown myGray2 text-white" aria-labelledby="The_Black_Shroud_Dropdown">
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#North_Shroud">North Shroud</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Central_Shroud">Central Shroud</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#East_Shroud">East Shroud</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#South_Shroud">South Shroud</a>
+						</div>
+					</li>
+
+
+					<li class="nav-item">
+						<a class="nav-link" href="Location.html#Mor_Dhona">Mor Dhona</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="Coerthas_Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Coerthas
+						</a>
+						<div class="dropdown-menu myNavDropdown myGray2 text-white" aria-labelledby="Coerthas_Dropdown">
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Coerthas_Western_Highlands">Coerthas Western Highlands</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Coerthas_Central_Highlands">Coerthas Central Highlands</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="Abalathias_Spine_Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Abalathia's Spine
+						</a>
+						<div class="dropdown-menu myNavDropdown myGray2 text-white" aria-labelledby="Abalathias_Spine_Dropdown">
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Azys_Lla">Azys Lla</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#The_Sea_of_Clouds">The Sea of Clouds</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="Dravania_Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Dravania
+						</a>
+						<div class="dropdown-menu myNavDropdown myGray2 text-white" aria-labelledby="Dravania_Dropdown">
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#The_Churning_Mists">The Churning Mists</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#The_Dravanian_Hinterlands">The Dravanian Hinterlands</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#The_Dravanian_Forelands">The Dravanian Forelands</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="Gyr_Abania_Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Gyr Abania
+						</a>
+						<div class="dropdown-menu myNavDropdown myGray2 text-white" aria-labelledby="Gyr_Abania_Dropdown">
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#The_Fringes">The Fringes</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#The_Peaks">The Peaks</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#The_Lochs">The Lochs</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="Othard_Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Othard
+						</a>
+						<div class="dropdown-menu myNavDropdown myGray2 text-white" aria-labelledby="Othard_Dropdown">
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#The_Azim_Steppe">The Azim Steppe</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#Yanxia">Yanxia</a>
+							<a class="dropdown-item myNavDropdownItem" href="Location.html#The_Ruby_Sea">The Ruby Sea</a>
+						</div>
+					</li>
+
+				</ul>
+
+			</div>
+		</nav>
+		<div class="centralBanner jumbotron jumbotron-fluid">
+			<div class="container text-center text-white">
+				<h1 class="display-4">Charmmy Kitty Mapping Tool</h1>
+				<p class="lead">Click a hunt's location on a map to copy the corresponding CharmmyKitty mapping command to your clipboard.</p>
+			</div>
+		</div>
+	</div> 
+	<script src="js/jquery-slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/myFrontpageScript.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+</body>
+</html>
