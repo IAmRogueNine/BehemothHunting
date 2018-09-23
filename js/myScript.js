@@ -67,7 +67,7 @@ function loadThePage(){
 	var url = window.location.toString();
 	
 	var locationStr = url.split("#").pop();
-	var locationStrPretty = locationStr.replace("_"," ");
+	var locationStrPretty = locationStr.replace(/_/g, " ");
 	var region  = locationToRegion[locationStr]
 
 	if (locationStr != "Mor_Dhona"){
@@ -94,10 +94,7 @@ function loadThePage(){
    	$(".mapPic").on("click", function(event) {
 
 	var locName = event.target.id;
-	
-	console.log(locName);
-
-	var locationNamePretty = locName.replace("_"," ");
+	var locationNamePretty = locName.replace(/_/g, " ");
 
 	var mapHeight  = $(event.target).height();
 	var mapWidth  = $(event.target).width();
@@ -107,16 +104,9 @@ function loadThePage(){
 	var markerWidth = 1.1*(mapWidth/81);
 	var markerHeight = 1.1*(mapHeight/81);
 
-	console.log("marker width: ",markerWidth)
-
-
 	var xy = $(event.target).offset();
 	var x = event.pageX - xy.left;
 	var y = event.pageY - xy.top;
-
-	// console.log("raw")
-	// console.log(event.pageX)
-	// console.log(event.pageY)
 
 	var theActualRatio  =40.9; 
 
@@ -127,22 +117,10 @@ function loadThePage(){
 	var coorX = (x*(theActualRatio/mapWidth))+1;
 	var coorY = (y*(theActualRatio/mapHeight))+1;
 
-	// console.log("raw coords")
-	// console.log(coorX)
-	// console.log(coorY)
-
 	var spXY = findClosestSpPt(coorX,coorY,locName);
-
-	// console.log("calc coords")
-	// console.log(spXY[0])
-	// console.log(spXY[1])
 
 	newEvX = ((((spXY[0]-1)*mapWidth))/theActualRatio)+(xy.left);
 	newEvY = ((((spXY[1]-1)*mapHeight))/theActualRatio+(xy.top));
-
-	// console.log("reversed:")
-	// console.log(newEvX)
-	// console.log(newEvY)
 
 	if (clicked){
 		$("#marker").remove();
