@@ -1,6 +1,7 @@
 body{
 	background-color: rgba(64, 64, 64, 1);
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:400;
 }
 
 
@@ -46,12 +47,15 @@ body{
 }
 
 .myNavDropdown{
-	font-size:  .75rem;
+	font-size:  1rem;
 }
 .myNavDropdownItem{
 	color: white;
 }
 
+.jumbotron{
+	font-weight:200;
+}
 .spacer{
 	height:56px; /*same height as navbar */
 	width:100%;

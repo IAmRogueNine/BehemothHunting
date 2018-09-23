@@ -10,7 +10,12 @@ window.addEventListener('hashchange', function() {
 });
 
 $( window ).resize(function() {
+	$("#marker").remove();
 	resizeTheMap();
+});
+
+$("#hamburgerBtn").on("click", function(event) {
+	$("#marker").remove();
 });
 
 var locationToRegion={
@@ -56,6 +61,9 @@ var locationToRegion={
 
 function loadThePage(){
 	var clicked = false;
+
+	$("#marker").remove();
+
 	var url = window.location.toString();
 	
 	var locationStr = url.split("#").pop();
@@ -68,6 +76,8 @@ function loadThePage(){
    		$(locationDropDown).append('<span class="sr-only">(current)</span>');
    		$(locationDropDown).addClass("active");
 	}
+
+
 	
 	//change title
    	document.title = locationStrPretty;
@@ -84,10 +94,21 @@ function loadThePage(){
    	$(".mapPic").on("click", function(event) {
 
 	var locName = event.target.id;
+	
+	console.log(locName);
+
 	var locationNamePretty = locName.replace("_"," ");
 
 	var mapHeight  = $(event.target).height();
 	var mapWidth  = $(event.target).width();
+
+	//the blue marker is 1/81st size of map
+	//we're going to make our markert slightly larger
+	var markerWidth = 1.1*(mapWidth/81);
+	var markerHeight = 1.1*(mapHeight/81);
+
+	console.log("marker width: ",markerWidth)
+
 
 	var xy = $(event.target).offset();
 	var x = event.pageX - xy.left;
@@ -97,9 +118,11 @@ function loadThePage(){
 	// console.log(event.pageX)
 	// console.log(event.pageY)
 
-	//something is off here but this seems to be good enough
-	//the actual coordinate being relayed to CK is correct
-	var theActualRatio  =40.8; 
+	var theActualRatio  =40.9; 
+
+	if (locName == "Coerthas_Western_Highlands" ||locName == "Azys_Lla" || locName == "The_Sea_of_Clouds"){
+		theActualRatio  =43.1
+	}
 
 	var coorX = (x*(theActualRatio/mapWidth))+1;
 	var coorY = (y*(theActualRatio/mapHeight))+1;
@@ -122,14 +145,16 @@ function loadThePage(){
 	// console.log(newEvY)
 
 	if (clicked){
-		$("#marker").remove()
+		$("#marker").remove();
 	}
 
 
 	$("body").append(            
 		$('<div id="marker"></div>').css({
-			top: newEvY-6 + 'px', //half the size of the marker itself
-			left: newEvX-6 + 'px'
+			height: markerHeight+'px',
+			width: markerWidth+'px',
+			top: newEvY-(markerHeight/2) + 'px', //half the size of the marker itself
+			left: newEvX-(markerWidth/2) + 'px'
 		})              
 	);
 
