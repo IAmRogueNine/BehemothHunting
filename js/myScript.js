@@ -110,7 +110,12 @@ function loadThePage(){
 
 	var theActualRatio  =40.9; 
 
-	if (locName == "Coerthas_Western_Highlands" ||locName == "Azys_Lla" || locName == "The_Sea_of_Clouds"){
+	if (locName == "The_Dravanian_Hinterlands" || 
+		locName == "The_Dravanian_Forelands" ||
+		locName == "The_Churning_Mists" ||
+		locName == "Coerthas_Western_Highlands" ||
+		locName == "Azys_Lla" || 
+		locName == "The_Sea_of_Clouds"){
 		theActualRatio  =43.1
 	}
 
