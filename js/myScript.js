@@ -101,8 +101,8 @@ function loadThePage(){
 
 	//the blue marker is 1/81st size of map
 	//we're going to make our markert slightly larger
-	var markerWidth = 1.1*(mapWidth/81);
-	var markerHeight = 1.1*(mapHeight/81);
+	var markerWidth = 1.3*(mapWidth/81);
+	var markerHeight = 1.3*(mapHeight/81);
 
 	var xy = $(event.target).offset();
 	var x = event.pageX - xy.left;
@@ -154,7 +154,7 @@ function resizeTheMap(){
 	var h = $(window).height();
 	var s = w;
 	if (w>=h){
-		s=h-$("#theNavBar").height();
+		s=h-$("#theNavBar").outerHeight();
 		$(".mapPic").css({"height": s});
 		$(".mapPic").css({"width": "auto"});
 	}else{
